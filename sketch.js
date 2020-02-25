@@ -2,7 +2,7 @@ let sliderWavelength, sliderFrequency, sliderAmplitude, sliderTrail;
 let λ, f, A, trail, t;
 
 function setup() {
-  createCanvas(displayWidth-40, displayHeight-200);
+  createCanvas(1000, 700);
   createP("Wavelength/Dalgaboyu: ");
   sliderWavelength = createSlider(5, width/2, width/3);
   createP("Frequency/Frekans: ");
