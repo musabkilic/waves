@@ -1,11 +1,13 @@
-let sliderPeriod;
-let T;
+let sliderPeriod, sliderTrail;
+let T, trail;
 let s = 75;
 
 function setup() {
   createCanvas(1000, 600);
   createP("Period(T): ");
   sliderPeriod = createSlider(5, width/2, width/3);
+  createP("Trail: ");
+  sliderTrail = createSlider(170, 250, 230);
   createDiv("<p># Created by <a href='https://musab.me'>Musab Kılıç</a></p>");
 }
 
@@ -23,8 +25,9 @@ function drawTextRotated(t, x, y){
 
 function draw() {
   T = sliderPeriod.value();
+  trail = sliderTrail.value();
 
-  background(200);
+  background(200, 200, 200, 255-trail);
   stroke(200);
   for(let i = 0; i <= 10; i++){
     drawTextRotated(width/10*i, max(10, min(width-10, width/10*i)), 30);
