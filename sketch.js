@@ -1,18 +1,19 @@
 let sliderPeriod, sliderTrail;
-let T, trail;
-let s = 75;
+let T, A, trail;
 
 function setup() {
   createCanvas(1000, 600);
-  createP("Period(T): ");
+  createP("Period/Periyot: ");
   sliderPeriod = createSlider(5, width/2, width/3);
-  createP("Trail: ");
+  createP("Amplitude/Genlik: ");
+  sliderAmplitude = createSlider(5, height/2, height/8);
+  createP("Trail/İz: ");
   sliderTrail = createSlider(170, 250, 230);
   createDiv("<p># Created by <a href='https://musab.me'>Musab Kılıç</a></p>");
 }
 
 function f(x){
-  return -s*sin((x+frameCount)*2*PI/T);
+  return -A*sin((x+frameCount)*2*PI/T);
 }
 
 function drawTextRotated(t, x, y){
@@ -25,6 +26,7 @@ function drawTextRotated(t, x, y){
 
 function draw() {
   T = sliderPeriod.value();
+  A = sliderAmplitude.value();
   trail = sliderTrail.value();
 
   background(200, 200, 200, 255-trail);
