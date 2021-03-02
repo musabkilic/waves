@@ -11,7 +11,7 @@ function setup() {
   sliderAmplitude = createSlider(5, height/2, height/8);
   createP("Trail/İz: ");
   sliderTrail = createSlider(170, 250, 230);
-  createDiv("<p>@<a href='https://musab.me'>Musab Kılıç</a></p>");
+  createDiv("<p>@<a href='https://musab.netlify.com'>Musab Kılıç</a></p>");
 }
 
 function w(x){
